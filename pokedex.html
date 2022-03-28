@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pokedex</title>
+    <link rel="stylesheet" href="./src/css/main.css">
+    <script src="./src/js/main.js"></script>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+</head>
+<body>
+    <div class="contenedor">
+        <div class="pokedex">
+            <img src="./src/assets/pokedex.jpg" alt="" >
+            <div class="imagen">
+                <img src="./src/assets/pokeball.gif" alt="" id="pokeImg">
+                <div id="identificador"></div>
+            </div>
+            <div class="estadisticas">
+                <div id="Seccion1" style="display: none">
+                    <h2>Tipo</h2>
+                    <table>
+                        <tr id="filaTipos"></tr>
+                    </table>
+                </div>
+                <div id="Seccion2" style="display: none">
+                    <h2>Estadísticas</h2>
+                    <ul id="stats"></ul>
+                </div>
+                <div id="Seccion3"  style="display: none">
+                    <h2>Habilidades</h2>
+                    <ul id="ability"></ul>
+                </div>
+            </div>
+            <input type="text" name="" id="pokemonID" placeholder="Nombre o número">
+            <input type="submit" value="&#xe8b6" onclick="buscar('')" id="boton" class="material-icons">
+            <input type="button" value="&#xe5de" onclick="buscar(-1)" id="menos1" class="material-icons">
+            <input type="button" value="&#xe5df" onclick="buscar(1)" id="mas1" class="material-icons">
+            <input type="button" value="&#xe5c7" onclick="buscar(10)" id="mas10" class="material-icons">
+            <input type="button" value="&#xe5c5" onclick="buscar(-10)" id="menos10" class="material-icons">
+            <input type="button" value="Normal" id="imgNormal" onclick="imgNormal()">
+            <input type="button" value="Shiny" id="imgShiny" onclick="imgShiny()">
+            <input type="button" value="Tipo" id="ver1" onclick="mostrarInfo(1)">
+            <input type="button" value="Stats" id="ver2" onclick="mostrarInfo(2)">
+            <input type="button" value="Habilidades" id="ver3" onclick="mostrarInfo(3)">
+            <div id="altura"></div>
+            <div id="peso"></div>
+        </div>
+    </div>
+</body>
+<script>
+    document.getElementById("imgNormal").disabled = true;
+    document.getElementById("imgShiny").disabled = true;
+    document.getElementById("ver1").disabled = true;
+    document.getElementById("ver2").disabled = true;
+    document.getElementById("ver3").disabled = true;
+</script>
+</html>
